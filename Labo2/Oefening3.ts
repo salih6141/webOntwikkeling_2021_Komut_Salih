@@ -13,5 +13,5 @@ for (let i = 0; i<70+1; i++){
 }*/
 
 for (let i = 0; i< veelVouden.length+1; i++){
-    (veelVouden[i]%5==0 || veelVouden[i]%3==0 ? console.log(veelVouden[i]): '');
+    (veelVouden[i]%5==0 || veelVouden[i]%3==0 ? console.log(veelVouden[i]): null);
 }
