@@ -15,3 +15,12 @@ let thematrix: Movie = {
     metascore: 73,
     seen: true
 }
+
+let myFavoriteMovie: Movie = {
+    title: "Deadpool",
+    year: 2016,
+    actors:["Ryan Reynlods","Ed Skrein","Morena Baccarin","TJ Miller"],
+    metascore: 65,
+    seen: true
+}
+
