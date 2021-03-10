@@ -53,14 +53,14 @@ const averageMetaScore = (movies:Array<MetaScoreAverage>) => {
     return opgeteldeScore/movies.length;
 }
 
-console.log(averageMetaScore([thematrix,myFavoriteMovie,myWorstMovie]));
+//console.log(averageMetaScore([thematrix,myFavoriteMovie,myWorstMovie]));
 
-const fakeMetaScore = (movie:Movie,newScore:number) => {
+const fakeMetaScore = (movie:FakeMetaCriticScore,newScore:number) => {
     movie.metascore = newScore;
     return movie;
 }
 
-//console.log(fakeMetaScore(myWorstMovie,100));
+console.log(fakeMetaScore(myWorstMovie,100));
 
 interface MovieFromThe90s{
     year : number
@@ -73,6 +73,6 @@ interface MetaScoreAverage{
 interface FakeMetaCriticScore{
     title : string
     year : number
-    actors : []
+    actors : Array<String>
     metascore : number
 }
