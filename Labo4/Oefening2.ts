@@ -40,3 +40,6 @@ const wasMovieMadeInThe90s = (movie:Movie) => {
         return false;
     }
 }
+
+console.log(wasMovieMadeInThe90s(thematrix));
+console.log(wasMovieMadeInThe90s(myFavoriteMovie));
