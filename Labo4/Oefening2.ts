@@ -63,16 +63,16 @@ const fakeMetaScore = (movie:Movie,newScore:number) => {
 //console.log(fakeMetaScore(myWorstMovie,100));
 
 interface MovieFromThe90s{
-    title : string
     year : number
 }
 
 interface MetaScoreAverage{
-    title : string
     metaScore : number
 }
 
 interface FakeMetaCriticScore{
     title : string
+    year : number
+    actors : []
     metaScore : number
 }
