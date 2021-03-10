@@ -33,7 +33,7 @@ let myWorstMovie: Movie = {
     seen:true //spijtig genoeg :(
 }
 
-const wasMovieMadeInThe90s = (movie:Movie) => {
+const wasMovieMadeInThe90s = (movie:MovieFromThe90s) => {
     if (movie.year < 2000){
         return true;
     }
@@ -42,8 +42,8 @@ const wasMovieMadeInThe90s = (movie:Movie) => {
     }
 }
 
-//console.log(wasMovieMadeInThe90s(thematrix));
-//console.log(wasMovieMadeInThe90s(myFavoriteMovie));
+console.log(wasMovieMadeInThe90s(thematrix));
+console.log(wasMovieMadeInThe90s(myFavoriteMovie));
 
 const averageMetaScore = (movies:Array<Movie>) => {
     let opgeteldeScore : number = 0;
