@@ -42,10 +42,10 @@ const wasMovieMadeInThe90s = (movie:MovieFromThe90s) => {
     }
 }
 
-console.log(wasMovieMadeInThe90s(thematrix));
-console.log(wasMovieMadeInThe90s(myFavoriteMovie));
+//console.log(wasMovieMadeInThe90s(thematrix));
+//console.log(wasMovieMadeInThe90s(myFavoriteMovie));
 
-const averageMetaScore = (movies:Array<Movie>) => {
+const averageMetaScore = (movies:Array<MetaScoreAverage>) => {
     let opgeteldeScore : number = 0;
     for (let i : number = 0; i< movies.length;i++){
          opgeteldeScore += movies[i].metascore;
@@ -53,7 +53,7 @@ const averageMetaScore = (movies:Array<Movie>) => {
     return opgeteldeScore/movies.length;
 }
 
-//console.log(averageMetaScore([thematrix,myFavoriteMovie,myWorstMovie]));
+console.log(averageMetaScore([thematrix,myFavoriteMovie,myWorstMovie]));
 
 const fakeMetaScore = (movie:Movie,newScore:number) => {
     movie.metascore = newScore;
@@ -67,12 +67,12 @@ interface MovieFromThe90s{
 }
 
 interface MetaScoreAverage{
-    metaScore : number
+    metascore : number
 }
 
 interface FakeMetaCriticScore{
     title : string
     year : number
     actors : []
-    metaScore : number
+    metascore : number
 }
