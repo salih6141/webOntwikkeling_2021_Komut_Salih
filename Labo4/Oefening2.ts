@@ -49,7 +49,7 @@ const averageMetaScore = (movies:Array<Movie>) => {
     for (let i : number = 0; i< movies.length;i++){
          opgeteldeScore += movies[i].metascore;
     }
-    return opgeteldeScore/movies.length + 1;
+    return opgeteldeScore/movies.length;
 }
 
 console.log(averageMetaScore([thematrix,myFavoriteMovie,myWorstMovie]));
