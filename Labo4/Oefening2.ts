@@ -24,3 +24,10 @@ let myFavoriteMovie: Movie = {
     seen: true
 }
 
+let myWorstMovie: Movie = {
+    title: "Assassin's Creed",
+    year: 2016,
+    actors:["Michael Fassbender","Brendan Gleeson","Jeremy Irons","Marion Cotillard"],
+    metascore: 36,
+    seen:true //spijtig genoeg :)
+}
