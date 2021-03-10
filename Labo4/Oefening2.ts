@@ -31,3 +31,12 @@ let myWorstMovie: Movie = {
     metascore: 36,
     seen:true //spijtig genoeg :)
 }
+
+const wasMovieMadeInThe90s = (movie:Movie) => {
+    if (movie.year < 2000){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
