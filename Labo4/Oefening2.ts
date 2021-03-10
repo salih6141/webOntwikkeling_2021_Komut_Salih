@@ -1,3 +1,4 @@
+import { title } from "node:process";
 import { StringifyOptions } from "node:querystring";
 
 interface Movie {
@@ -53,3 +54,8 @@ const averageMetaScore = (movies:Array<Movie>) => {
 }
 
 console.log(averageMetaScore([thematrix,myFavoriteMovie,myWorstMovie]));
+
+const fakeMetaScore = (movie:Movie,newScore:number) => {
+    movie.metascore = newScore;
+    return movie;
+}
