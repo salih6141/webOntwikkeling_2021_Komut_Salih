@@ -42,8 +42,8 @@ const wasMovieMadeInThe90s = (movie:Movie) => {
     }
 }
 
-console.log(wasMovieMadeInThe90s(thematrix));
-console.log(wasMovieMadeInThe90s(myFavoriteMovie));
+//console.log(wasMovieMadeInThe90s(thematrix));
+//console.log(wasMovieMadeInThe90s(myFavoriteMovie));
 
 const averageMetaScore = (movies:Array<Movie>) => {
     let opgeteldeScore : number = 0;
@@ -53,9 +53,11 @@ const averageMetaScore = (movies:Array<Movie>) => {
     return opgeteldeScore/movies.length;
 }
 
-console.log(averageMetaScore([thematrix,myFavoriteMovie,myWorstMovie]));
+//console.log(averageMetaScore([thematrix,myFavoriteMovie,myWorstMovie]));
 
 const fakeMetaScore = (movie:Movie,newScore:number) => {
     movie.metascore = newScore;
     return movie;
 }
+
+console.log(fakeMetaScore(myWorstMovie,100));
