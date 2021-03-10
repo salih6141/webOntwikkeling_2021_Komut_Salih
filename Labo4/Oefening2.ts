@@ -71,3 +71,8 @@ interface MetaScoreAverage{
     title : string
     metaScore : number
 }
+
+interface FakeMetaCriticScore{
+    title : string
+    metaScore : number
+}
