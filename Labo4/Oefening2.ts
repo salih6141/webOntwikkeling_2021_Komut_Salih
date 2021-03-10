@@ -29,7 +29,7 @@ let myWorstMovie: Movie = {
     year: 2016,
     actors:["Michael Fassbender","Brendan Gleeson","Jeremy Irons","Marion Cotillard"],
     metascore: 36,
-    seen:true //spijtig genoeg :)
+    seen:true //spijtig genoeg :(
 }
 
 const wasMovieMadeInThe90s = (movie:Movie) => {
@@ -43,3 +43,13 @@ const wasMovieMadeInThe90s = (movie:Movie) => {
 
 console.log(wasMovieMadeInThe90s(thematrix));
 console.log(wasMovieMadeInThe90s(myFavoriteMovie));
+
+const averageMetaScore = (movies:Array<Movie>) => {
+    let opgeteldeScore : number = 0;
+    for (let i : number = 0; i< movies.length;i++){
+         opgeteldeScore += movies[i].metascore;
+    }
+    return opgeteldeScore/movies.length + 1;
+}
+
+console.log(averageMetaScore([thematrix,myFavoriteMovie,myWorstMovie]));
