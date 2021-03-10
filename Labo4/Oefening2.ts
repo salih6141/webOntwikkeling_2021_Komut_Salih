@@ -60,4 +60,10 @@ const fakeMetaScore = (movie:Movie,newScore:number) => {
     return movie;
 }
 
-console.log(fakeMetaScore(myWorstMovie,100));
+//console.log(fakeMetaScore(myWorstMovie,100));
+
+interface MovieFromThe90s{
+    title : string
+    year : number
+}
+
