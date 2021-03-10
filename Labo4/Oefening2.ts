@@ -67,3 +67,7 @@ interface MovieFromThe90s{
     year : number
 }
 
+interface MetaScoreAverage{
+    title : string
+    metaScore : number
+}
