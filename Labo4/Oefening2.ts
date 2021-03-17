@@ -6,6 +6,7 @@ interface Movie {
     year : number
     actors: Array<String>
     metascore: number
+    imdb: number
     seen : boolean
 }
 
@@ -14,6 +15,7 @@ let thematrix: Movie = {
     year: 1999, 
     actors:["Keanu reeves","Laurence Fishburne","Carrie-Anne Moss"], 
     metascore: 73,
+    imdb: 9,
     seen: true
 }
 
@@ -22,6 +24,7 @@ let myFavoriteMovie: Movie = {
     year: 2016,
     actors:["Ryan Reynlods","Ed Skrein","Morena Baccarin","TJ Miller"],
     metascore: 65,
+    imdb: 7,
     seen: true
 }
 
@@ -30,6 +33,7 @@ let myWorstMovie: Movie = {
     year: 2016,
     actors:["Michael Fassbender","Brendan Gleeson","Jeremy Irons","Marion Cotillard"],
     metascore: 36,
+    imdb: 3,
     seen:true //spijtig genoeg :(
 }
 
@@ -53,6 +57,17 @@ const averageMetaScore = (movies:Array<MetaScoreAverage>) => {
     return opgeteldeScore/movies.length;
 }
 
+const totalImdbScore = (movies: Array<Movie>) => {
+    let totaalScore : number = 0;
+
+    for (let i : number = 0; i < movies.length; i++){
+        totaalScore += movies[i].imdb;
+    }
+    return totaalScore;
+}
+
+console.log(totalImdbScore([thematrix,myFavoriteMovie,myWorstMovie]));
+
 //console.log(averageMetaScore([thematrix,myFavoriteMovie,myWorstMovie]));
 
 const fakeMetaScore = (movie:FakeMetaCriticScore,newScore:number) => {
@@ -60,7 +75,7 @@ const fakeMetaScore = (movie:FakeMetaCriticScore,newScore:number) => {
     return movie;
 }
 
-console.log(fakeMetaScore(myWorstMovie,100));
+//console.log(fakeMetaScore(myWorstMovie,100));
 
 interface MovieFromThe90s{
     year : number
@@ -68,6 +83,10 @@ interface MovieFromThe90s{
 
 interface MetaScoreAverage{
     metascore : number
+}
+
+interface imdbScore{
+    imdb: number
 }
 
 interface FakeMetaCriticScore{
