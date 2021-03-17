@@ -1,11 +1,21 @@
-const printToConsole = (number: number) : void => console.log(`the result is ${number}`);
+const printToConsole:ConsolePrinter = (number) : void => console.log(`the result is ${number}`)
 
-let sum = (numbers: Array<number>) : void => {
-    let number : number = 0;
-    for (let i : number = 0; i < numbers.length;i++){
-        number += numbers[i];
-    }
-    printToConsole(number);
+interface ConsolePrinter {
+    (number: number):void
 }
 
-sum([1,2,2,5,10]);
+let sum = (numbers: Array<number>,printfunctie:ConsolePrinter,functie2:ConsolePrinter) => {
+    let totaal : number = 0;
+    for (let i : number = 0; i < numbers.length;i++){
+        totaal += numbers[i]
+    }
+    if (totaal <= 10){
+        functie2(totaal)
+    }
+    else{
+        printfunctie(totaal)
+    }
+}
+
+sum([1,2,3,4],printToConsole, number => console.log(`the result ${number} is a very small number`));
+
