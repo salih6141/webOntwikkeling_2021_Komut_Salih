@@ -15,3 +15,4 @@ let starterPokemonGen2 : Pokemon[]  = [
     {name: 'Totodile', xp: 45, type: 'water'}
 ];
 
+let starters = [...starterPokemonGen1, ...starterPokemonGen2]
