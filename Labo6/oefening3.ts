@@ -16,3 +16,6 @@ let starterPokemonGen2 : Pokemon[]  = [
 ];
 
 let starters = [...starterPokemonGen1, ...starterPokemonGen2]
+
+let namen: string[] = starters.map(p=>p.name)
+console.log(namen)
