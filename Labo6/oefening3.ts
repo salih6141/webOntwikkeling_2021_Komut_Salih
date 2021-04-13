@@ -44,4 +44,4 @@ let sortedStarters: Pokemon[] = [...starters].sort((a,b)=>{
     if(a.name > b.name) return 1
     return 0
 })
-console.log(sortedStarters)
+//console.log(sortedStarters)
