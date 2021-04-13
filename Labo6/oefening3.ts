@@ -35,4 +35,13 @@ let strongestPokemon: Pokemon = starters.reduce((currentStrongestPokemon, pokemo
 let sumOfAllXpOfWeakPokemon = starters
     .filter(p=>p.xp<40)
     .reduce((sum,p)=>sum += p.xp,0)
-console.log(sumOfAllXpOfWeakPokemon)
+//console.log(sumOfAllXpOfWeakPokemon)
+
+let sortedStarters: Pokemon[] = [...starters].sort((a,b)=>{
+    if(a.xp < b.xp) return -1
+    if(a.xp < b.xp) return 1
+    if(a.name < b.name) return -1
+    if(a.name > b.name) return 1
+    return 0
+})
+console.log(sortedStarters)
