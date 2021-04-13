@@ -21,4 +21,7 @@ let namen: string[] = starters.map(p=>p.name)
 //console.log(namen)
 
 let weakPokemon: Pokemon[] = starters.filter(p=>p.xp<40)
-console.log(weakPokemon)
+//console.log(weakPokemon)
+
+let weakPokemonNames: string[] = starters.filter(p=>p.xp<40).map(p=>p.name)
+console.log(weakPokemonNames)
