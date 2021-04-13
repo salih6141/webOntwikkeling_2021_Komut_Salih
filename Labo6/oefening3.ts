@@ -24,4 +24,7 @@ let weakPokemon: Pokemon[] = starters.filter(p=>p.xp<40)
 //console.log(weakPokemon)
 
 let weakPokemonNames: string[] = starters.filter(p=>p.xp<40).map(p=>p.name)
-console.log(weakPokemonNames)
+//console.log(weakPokemonNames)
+
+let sumOfAllXp: number = starters.reduce((sum,p)=>sum += p.xp,0)
+console.log(sumOfAllXp)
