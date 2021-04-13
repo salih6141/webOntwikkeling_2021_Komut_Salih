@@ -27,4 +27,7 @@ let weakPokemonNames: string[] = starters.filter(p=>p.xp<40).map(p=>p.name)
 //console.log(weakPokemonNames)
 
 let sumOfAllXp: number = starters.reduce((sum,p)=>sum += p.xp,0)
-console.log(sumOfAllXp)
+//console.log(sumOfAllXp)
+
+let strongestPokemon: Pokemon = starters.reduce((currentStrongestPokemon, pokemon)=>currentStrongestPokemon.xp>pokemon.xp ? currentStrongestPokemon: pokemon,{name:'', xp:-1000,type:''})
+//console.log(strongestPokemon)
