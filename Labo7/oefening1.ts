@@ -13,3 +13,4 @@ const slowMult = (a: number, b: number) => {
         },1500)
     });
 }
+console.log(slowSum(1,5) === slowMult(promise,2))
