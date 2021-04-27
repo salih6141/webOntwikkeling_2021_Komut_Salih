@@ -22,4 +22,4 @@ app1.get('/getData',(req:any,res:any)=>{
     res.json(data);
 })
 
-app1.listen(app1.get('port'), ()=>console.log('[server] http://localhost:' + app.get('port')));
+app1.listen(app1.get('port'), ()=>console.log('[server] http://localhost:' + app1.get('port')));
