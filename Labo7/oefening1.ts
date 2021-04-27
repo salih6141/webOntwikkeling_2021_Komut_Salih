@@ -21,7 +21,7 @@ const slowMult = (a: number, b: number) => {
 const slowDiv = (a:number, b:number) => {
     return new Promise<number>((resolve,reject) => {
         setTimeout(() => {
-            if (b !== 0){
+            if (a == 0 || b == 0){
             resolve(a/b);
             }
             else{
