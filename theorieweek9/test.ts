@@ -7,9 +7,15 @@ app.get('/',(req:any,res:any)=>{
     res.send('Hello World')
 })
 
-app.get('/',(req:any,res:any)=>{
+app.get('/goodbye',(req:any,res:any)=>{
     res.type('text/html');
     res.send('goodbye world')
+})
+
+app.use((req:any,res:any)=>{
+    res.type('text/html');
+    res.status(404);
+    res.send('404 - not found');
 })
 
 app.listen(app.get('port'),
