@@ -7,9 +7,10 @@ const dadJokes = async() => {
         'Accept': 'application/json'
       }
    })
+   let alljokes = await jokes.json()
+   for (let x:number = 0; x < alljokes.result.length; x++){
+     console.log(alljokes.result[x].joke)
+   }
   }
 }
 
-const alleenDog = async (joke:string):Promise<void> => {
-    if 
-}
