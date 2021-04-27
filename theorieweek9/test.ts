@@ -17,6 +17,7 @@ app.use((req:any,res:any)=>{
     res.status(404);
     res.send('404 - not found');
 })
+//de app.use moet onderaan de app.get staan anders zal geen enkele path werken maar het moet wel boven de app.listen staan
 
 app.listen(app.get('port'),
     ()=>console.log( '[server] http://localhost:' + app.get('port')));
