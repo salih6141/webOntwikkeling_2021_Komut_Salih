@@ -6,3 +6,6 @@ app2.get('/',(req:any,res:any)=>{
     res.type('text/html');
     res.send('Hello world')
 })
+
+app2.listen(app2.get('port'),
+    ()=>console.log('[server] http://localhost:' + app2.get('port')));
