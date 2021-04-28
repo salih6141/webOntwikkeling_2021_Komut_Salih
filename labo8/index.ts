@@ -1,10 +1,12 @@
-const express2 = require('express');
-const app2 = express2();
+const express3 = require('express')
+const app2 = express3();
+const ejs = require('ejs');
+
 app2.set('port',3000);
+app2.set('view engine','ejs');
 
 app2.get('/',(req:any,res:any)=>{
-    res.type('text/html');
-    res.render('index.ejs')
+    res.render('index');
 })
 
 app2.get('/whoami',(req:any,res:any)=>{
