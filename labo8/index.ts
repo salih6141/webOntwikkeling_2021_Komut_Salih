@@ -4,7 +4,7 @@ app2.set('port',3000);
 
 app2.get('/',(req:any,res:any)=>{
     res.type('text/html');
-    res.send('Hello world')
+    res.render('index.ejs')
 })
 
 app2.get('/whoami',(req:any,res:any)=>{
