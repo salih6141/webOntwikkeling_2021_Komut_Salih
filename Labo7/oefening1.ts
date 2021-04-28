@@ -1,7 +1,3 @@
-import { rejects } from "assert/strict";
-import { resolve } from "node:path";
-import { promises } from "node:stream";
-
 const slowSum = (a: number, b: number) => {
     return new Promise<number>((resolve, reject) => {
         setTimeout(() => {
