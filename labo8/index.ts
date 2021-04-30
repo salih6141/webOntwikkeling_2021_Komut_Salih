@@ -19,9 +19,11 @@ app2.get('/whoami',(req:any,res:any)=>{
     })
 });
 
+
 app2.get('/whoamijson',(req:any,res:any)=>{
-    res.type('text/html');
-    res.send('Hello World, whoamijson')
+    res.render('whoamijson',{
+        
+    })
 })
 
 app2.get('/pikachujson',(req:any,res:any)=>{
