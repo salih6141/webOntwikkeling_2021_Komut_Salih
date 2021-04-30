@@ -1,8 +1,12 @@
 import { Profiler, url } from "node:inspector";
+import { promises } from "node:stream";
 
 const express3 = require('express')
 const app2 = express3();
 const ejs = require('ejs');
+const fetch = require('node-fetch');
+
+let pikachu = fetch('https://pokeapi.co/api/v2/pokemon/pikachu').then((Response:any) => Response.json());
 
 app2.set('view engine', 'ejs');
 app2.set('port',3000);
@@ -29,8 +33,9 @@ app2.get('/whoamijson',(req:any,res:any)=>{
 })
 
 app2.get('/pikachujson',(req:any,res:any)=>{
-    res.type('text/html');
-    res.send('Hello World, pikachu')
+    res.render('pikachujson',{
+        pikachu: JSON.stringify(pikachu)
+    })
 })
 
 app2.get('/pikachuhtml',(req:any,res:any)=>{
