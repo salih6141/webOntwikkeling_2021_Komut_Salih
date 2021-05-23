@@ -1,6 +1,3 @@
-import { Profiler, url } from "node:inspector";
-import { promises } from "node:stream";
-
 const express3 = require('express')
 const app2 = express3();
 const ejs = require('ejs');
@@ -45,3 +42,5 @@ app2.get('/pikachuhtml',(req:any,res:any)=>{
 
 app2.listen(app2.get('port'),
     ()=>console.log('[server] http://localhost:' + app2.get('port')));
+
+export{}
